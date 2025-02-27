@@ -1,0 +1,20 @@
+---
+# Hello World Playbook
+# This playbook demonstrates pinging all machines and displaying a message.
+
+# Define the playbook
+- name: Hello World Playbook
+  # Specify the group of hosts from the inventory file
+  hosts: localhost
+
+  # List of tasks to be executed
+  tasks:
+    # Task 1: Ping all machines
+    - name: Ping All Machines
+      # Ansible 'ping' module to check connectivity
+      ping:
+
+    # Task 2: Display "hello from team" message on the terminal
+    - name: Display Hello Message
+      # Ansible 'command' module to run a command on the control node     
+      command: echo "Hello from DevToDevOps team"
